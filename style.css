@@ -14,7 +14,7 @@ li, a, button{
 header{
     background-color: white;
     display: flex;
-    justify-content:flex-end;
+    justify-content:space-between;
     align-items: center;
     padding: 30px 30px;
     position: fixed;
@@ -55,4 +55,5 @@ button{
 }
 button:hover{
     background-color: #ecc19c;
+    color: #1e847f;
 }
