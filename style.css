@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 
 /**#ecc19c, #1e847f, #000000, #333333**/
+
+/**palette couleur
+361D32
+543C52
+F55951
+EDD2CB
+F1E8E6
+*/
 
 *, *:before, *:after {
     box-sizing: inherit;
@@ -52,15 +61,13 @@ nav{
     transition: all 0.3s ease 0s;
 }
 .nav__links li a:hover{
-    color:#ecc19c;
+    color:#F55951;
 }
 
-.main{
-    background-color: #1e847f;
-}
 
 
 .categoryEntrance{
+    padding-top: 2%;
 
 }
 
@@ -68,27 +75,42 @@ nav{
 
 }
 .row{
+    padding-top:3%;
+    text-align: center;
 
+    background-color: #F1E8E6;
 }
 
 .headingRowCentered{
-    text-align: center;
-    color:#ecc19c;
+
     font-family: "Montserrat", sans-serif;
-    font-size: 30px;
+    font-weight: lighter;
+    color:#543C52;
+    font-size: 50px;
+    padding-bottom: 2%;
+
 }
 .pictureHome{
     object-fit:cover;
     width: 100%;
     outline: 2px solid white;
     outline-offset: -20px;
-    
 }
+.pictureOfTheDay img{
+    margin: auto;
+    width: 60%;
+    height: 50vw;
+    object-fit:cover;
+    outline: 2px solid white;
+    outline-offset: -20px;
+}
+
 
 .pageHeader{
     padding: 2%;
-    padding-top: 30%;
+    padding-top: 20%;
     text-align: center;
+    height: 700px;
 }
 .textOnImageHome, .textOnImageHomeTitle{
     position: relative;
@@ -205,11 +227,15 @@ nav{
     }
   }
 
+  /*PC*/
   @media only screen and (min-width: 700px) {
     .pictureHome{height: 600px;}
     .textOnImageHomeTitle{
         font-size: 80px;
         bottom: 400px;
+    }
+    .textOnImageHome{
+        font-size: 19px;
     }
     .pageHeader{padding-top: 6%;}
     .ArrowDownAnimation::before{
@@ -238,12 +264,19 @@ nav{
         transform: translateY(-15px) rotate(-45deg);
     }
 
+
+    /*FOR PHONE*/
   }
   @media only screen and (max-width: 500px) {
-    .pictureHome{height: 600px;}
+    .pictureHome{
+        height: 600px;
+        outline-offset: -30px;
+    }
     .textOnImageHomeTitle{
         font-size: 70px;
         bottom: 400px;
+    }
+    .headingRowCentered{
     }
     
   }
