@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Today's Special</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
@@ -25,11 +26,13 @@
   </header>
 
   <div class="pageHeader">
-    
+
     <picture>
-      <source srcset="images/homePicture.jpg" media="(min-width: 800px)">
-      <img class="pictureHome" src="images/homePicture.jpg" alt=""/>
+      <source  class="pictureHome" media="(max-width: 899px)" srcset="images/homePicture2.jpg">
+      <source  class="pictureHome" media="(min-width: 900px)" srcset="images/homePicture.jpg">
+      <img class="pictureHome" src="images/homePicture2.jpg" alt=""/>
     </picture>
+
     <a class="ArrowDownAnimation"></a>
     <p class="textOnImageHome">FAITES DÉFILER POUR EN SAVOIR PLUS!</p>
     <p class="textOnImageHomeTitle">Today's Special</p>
