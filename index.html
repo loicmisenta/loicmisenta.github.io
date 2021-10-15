@@ -8,36 +8,44 @@
 </head>
 <body>
   <header>
-    <img class="logo" src="images/logoTodaysSpecial.svg" alt="logo">
-      <nav>
+      <nav class="navbar">
+        <!--<a href="#">
+          <img class="logo" src="images/logoTodaysSpecial.svg" alt="logo">
+        </a>
+      -->
+        <img class="logo" href="#" src="images/logoTodaysSpecial.svg" alt="logo">
         <ul class="nav__links">
           <li><a href="#">Home</a></li>
           <li><a href="#">Recettes</a></li>
           <li><a href="#">Rechercher</a></li>
         </ul>
+        <a class="cta" href="#"><button>Contact</button></a>
       </nav>
-      <a class="cta" href="#"><button>Contact</button></a>
+
   </header>
-  <div class="main">
-    <!--/**<h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    <h1>hola</h1>
-    -->
+
+  <div class="pageHeader">
+    
+    <picture>
+      <source srcset="images/HomePicture.jpg" media="(min-width: 800px)">
+      <img class="pictureHome" src="images/homePicture.jpg" alt=""/>
+    </picture>
+    <a class="ArrowDownAnimation"></a>
+    <p class="textOnImageHome">FAITES DÉFILER POUR EN SAVOIR PLUS!</p>
+    <p class="textOnImageHomeTitle">Today's Special</p>
+  </div>
+
+  <div class="categoryEntrance">
+    <div class="container-horizontal-padding">
+      <div class="row">
+        <div class="headingRowCentered">
+          <p>LA TENDANCE DU JOUR</p>
+        </div>
+      </div>
+
+
+    </div>
+
   </div>
 </body>
 </html>
