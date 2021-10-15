@@ -12,10 +12,10 @@
     box-sizing: border-box;
   }
 
-li, a, button{
+li, a{
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+
     color: black;
     text-decoration: none;
 }
@@ -28,6 +28,7 @@ nav{
     position: fixed;
     padding: 20px;
     z-index:1;
+    
 
 }
 
@@ -39,10 +40,13 @@ nav{
 }
 .nav__links{
     list-style: none;
+
 }
 .nav__links li{
-    display: inline-block;
+    display:contents;
+    position:relative;
     padding: 0px 20px;
+    font-size: 14px;
 }
 .nav__links li a{
     transition: all 0.3s ease 0s;
@@ -55,18 +59,6 @@ nav{
     background-color: #1e847f;
 }
 
-button{
-    padding: 9px 25px;
-    background-color: #1e847f;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-button:hover{
-    background-color: #ecc19c;
-    color: black;
-}
 
 .categoryEntrance{
 
@@ -105,8 +97,8 @@ button:hover{
 }
 
 .textOnImageHomeTitle{
-    bottom: 200px;
-    font-size: 25px;
+    bottom: 280px;
+    font-size: 50px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-style: italic;
@@ -144,6 +136,68 @@ button:hover{
     text-align: center;
     width: 6rem;
   }
+
+
+  .burger-wrapper {
+    cursor: pointer;
+  }
+  #meny {
+      background: #333;
+      width: 10rem;
+      height: 20rem;
+      position: fixed;
+      right: 0;
+      transition-timing-function: cubic-bezier(10,2,3,1);
+      transform: translateX(50rem);
+      top: 0;
+      z-index: 0;
+      transition: 0.5s;
+  }
+  #menyAvPaa {
+      display: none;
+  }
+  
+  #menyAvPaa:checked ~ #meny {
+      transform: translateX(0rem);
+  }
+  
+  #burger {
+      position: relative;
+      cursor: pointer;
+      width: 1rem;
+      height: 1rem;
+      right: 1rem;
+      top: 0rem;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+  }
+  
+  #burger > div {
+      height: 2px;
+      background-color: #000;
+      transition: 0.5s;
+      z-index: 999;
+  }
+  
+  #menyAvPaa:checked ~ #burger > div {
+    background-color: #fff;
+  }
+  
+  #menyAvPaa:checked ~ #burger > div:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+  }
+  #menyAvPaa:checked ~ #burger > div:nth-child(2) {
+      opacity: 0;
+  }
+  #menyAvPaa:checked ~ #burger > div:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+  }
+  
+  .homeLink{
+      display: none;
+  }
+
   
   @keyframes bounce {
     50% {
@@ -151,22 +205,45 @@ button:hover{
     }
   }
 
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 700px) {
     .pictureHome{height: 600px;}
     .textOnImageHomeTitle{
         font-size: 80px;
         bottom: 400px;
     }
-    .headingRowCentered{background-color: red};
-    .textOnImageHome{color: red;}
     .pageHeader{padding-top: 6%;}
     .ArrowDownAnimation::before{
         font-size: 2rem;
         line-height: 4rem;
         height: 4rem;
     }
+    .homeLink{
+        display:inline-block;
+    }
+    .nav__links li{
+        font-size: 16px;
+        display:inline-block;
+    }
+
+    #burger {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    #menyAvPaa:checked ~ #burger > div:nth-child(1) {
+        transform: translateY(15px) rotate(45deg);
+    }
+
+    #menyAvPaa:checked ~ #burger > div:nth-child(3) {
+        transform: translateY(-15px) rotate(-45deg);
+    }
+
   }
-  @media only screen and (max-width: 400) {
-    .pictureHome{height: 900px;}
+  @media only screen and (max-width: 500px) {
+    .pictureHome{height: 600px;}
+    .textOnImageHomeTitle{
+        font-size: 70px;
+        bottom: 400px;
+    }
     
   }
